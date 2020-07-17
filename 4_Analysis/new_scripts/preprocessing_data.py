@@ -145,7 +145,7 @@ dataset_normal_data_validation.columns = preserve_col
 dataset_normal_data_validation.to_csv(store_path_normal_validation, index=False)
 # dataset_normal_data_validation = smooth_time_series(dataset_normal_data_validation, window_length=window_length)
 
-experiment = "memory"
+experiment = "cpu"
 path = "/home/matilda/PycharmProjects/RCA_metrics /3_Preprocessing_data/" + experiment + "/" + service + ".csv"
 
 store_path_test_descritpion = "/home/matilda/PycharmProjects/RCA_metrics /3_Preprocessing_data/ready_data_training/" + service + "/" + experiment + "_test.csv"
@@ -199,31 +199,31 @@ targets.to_csv(store_path_test_labels, index=False)
 # # dataset.path = path
 
 ############# Investigate anomaly data #############
-# service = "orders"
-# anomaly = "memory"
-# path = "/home/matilda/PycharmProjects/RCA_metrics /3_Preprocessing_data/" + anomaly + "/" + service + ".csv"
-# dataset = Service(path)
-# metric = "node_cpu"
-#
+service = "orders"
+anomaly = "cpu"
+path = "/home/matilda/PycharmProjects/RCA_metrics /3_Preprocessing_data/" + anomaly + "/" + service + ".csv"
+dataset = Service(path)
+metric = "node_cpu"
+
 
 value = 521
-# for idx, metric in enumerate(preserve_col):
-#     plt.subplot(value+idx)
-#     plt.plot(normal_data[:, idx], label=metric)
-#     plt.plot(normal_data[:, -2], label="source response time", alpha=0.2)
-#     plt.plot(normal_data[:, -1], label="destionation response time", alpha=0.2)
-#     plt.title(metric)
-#     plt.legend()
-#
-# plt.figure(2)
+for idx, metric in enumerate(preserve_col):
+    plt.subplot(value+idx)
+    plt.plot(normal_data[:, idx], label=metric)
+    plt.plot(normal_data[:, -2], label="source response time", alpha=0.2)
+    plt.plot(normal_data[:, -1], label="destionation response time", alpha=0.2)
+    plt.title(metric)
+    plt.legend()
+
+plt.figure(2)
 # targets
 for idx, metric in enumerate(preserve_col):
     plt.subplot(value+idx+1)
+
+
     plt.scatter(np.arange(0, abnormal_data[:, idx].shape[0]), abnormal_data[:, idx],  label=metric, c=np.where(targets.iloc[:, 1]==1, "red", "blue"))
-    # plt.scatter(np.arange(0, abnormal_data[:, idx].shape[0]), abnormal_data[:, -2],  label=metric, c=np.where(targets.iloc[:, 1]==1, "green", "black"), alpha=0.2)
-    # plt.scatter(np.arange(0, abnormal_data[:, idx].shape[0]), abnormal_data[:, -1],  label=metric, c=np.where(targets.iloc[:, 1]==1, "cyan", "yellow"), alpha=0.2)
+    # plt.scatter(np.arange(0, abnormal_data[:, idx].shape[0]), abnormal_data[:, -2],  label=metric, c=np.where(targets.iloc[:, 1]==1, "red", "blue"), alpha=0.2)
+    # plt.scatter(np.arange(0, abnormal_data[:, idx].shape[0]), abnormal_data[:, -1],  label=metric, c=np.where(targets.iloc[:, 1]==1, "red", "blue"), alpha=0.2)
     plt.title(metric)
     plt.legend()
 # # dataset.path = path
-
-
