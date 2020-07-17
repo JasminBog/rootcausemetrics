@@ -4,13 +4,10 @@ import  numpy as np
 import torch
 import torch.functional as F
 from torch.utils.data import TensorDataset, SequentialSampler, RandomSampler
-
 import  matplotlib
 matplotlib.use("TkAgg")
 import seaborn as sns
 import matplotlib.pyplot as plt
-
-
 
 def get_normal_files_service(service, percentile, experiment, path):
     path = path + "/" + experiment
@@ -67,7 +64,6 @@ for service in ["carts", "orders", "shipping", "user", "catalogue", "payment"]:
 
     # abnormal_data = read_abnormal_service(service, percentile, experiment, path)
     # abnormal_data.to_csv(service_to_store, index=False)
-
 
 
 # plt.plot(service_data.loc[:, service+ "_source_latency"], label="source_latency", c="blue")

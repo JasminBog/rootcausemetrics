@@ -1,0 +1,43 @@
+== Service: Memory Leak ==
+Service: user
+Fault start-point: Sun Jul 12 09:45:55 CEST 2020
+Fault start-point: Sun Jul 12 09:54:57 CEST 2020
+Fault start-point: Sun Jul 12 10:03:59 CEST 2020
+Fault start-point: Sun Jul 12 10:13:01 CEST 2020
+Fault start-point: Sun Jul 12 10:22:04 CEST 2020
+Fault start-point: Sun Jul 12 10:31:06 CEST 2020
+Service: catalogue
+Fault start-point: Sun Jul 12 10:42:41 CEST 2020
+Fault start-point: Sun Jul 12 10:51:43 CEST 2020
+Fault start-point: Sun Jul 12 11:00:45 CEST 2020
+Fault start-point: Sun Jul 12 11:09:47 CEST 2020
+Fault start-point: Sun Jul 12 11:18:50 CEST 2020
+Fault start-point: Sun Jul 12 11:27:52 CEST 2020
+Service: payment
+Fault start-point: Sun Jul 12 11:39:08 CEST 2020
+Fault start-point: Sun Jul 12 11:48:10 CEST 2020
+Fault start-point: Sun Jul 12 11:57:13 CEST 2020
+Fault start-point: Sun Jul 12 12:06:15 CEST 2020
+Fault start-point: Sun Jul 12 12:15:17 CEST 2020
+Fault start-point: Sun Jul 12 12:24:19 CEST 2020
+Service: shipping
+Fault start-point: Sun Jul 12 12:35:55 CEST 2020
+Fault start-point: Sun Jul 12 12:44:57 CEST 2020
+Fault start-point: Sun Jul 12 12:53:59 CEST 2020
+Fault start-point: Sun Jul 12 13:03:01 CEST 2020
+Fault start-point: Sun Jul 12 13:12:04 CEST 2020
+Fault start-point: Sun Jul 12 13:21:06 CEST 2020
+Service: carts
+Fault start-point: Sun Jul 12 13:32:45 CEST 2020
+Fault start-point: Sun Jul 12 13:41:47 CEST 2020
+Fault start-point: Sun Jul 12 13:50:49 CEST 2020
+Fault start-point: Sun Jul 12 13:59:51 CEST 2020
+Fault start-point: Sun Jul 12 14:08:54 CEST 2020
+Fault start-point: Sun Jul 12 14:17:56 CEST 2020
+Service: orders
+Fault start-point: Sun Jul 12 14:28:33 CEST 2020
+Fault start-point: Sun Jul 12 14:37:35 CEST 2020
+Fault start-point: Sun Jul 12 14:46:37 CEST 2020
+Fault start-point: Sun Jul 12 14:53:46 CEST 2020
+Fault start-point: Sun Jul 12 15:02:48 CEST 2020
+Fault start-point: Sun Jul 12 15:11:50 CEST 2020
