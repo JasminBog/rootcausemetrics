@@ -1,0 +1,10 @@
+type, score, LSTM_LS1, Attention_LS1, LSTM_LS2, Attention_LS3
+Long,      Precision, 0.67, 0.88, 0.96, 0.99
+    ,      Recall,    0.46, 0.88, 0.43, 0.89
+    ,      F1,        0.54, 0.88, 0.59, 0.94
+Short,     Precision, 1.00, 1.00, 1.00, 1.00
+     ,     Recall,    0.99, 0.99, 0.96, 0.98
+     ,     F1,        0.99, 0.99, 0.98, 0.99
+ShortLong, Precision, 1.00, 0.99, 1.00, 0.99
+         , Recall,    0.98, 0.99, 0.88, 0.99
+         , F1,        0.99, 0.99, 0.94, 0.99

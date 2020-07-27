@@ -219,8 +219,6 @@ plt.figure(2)
 # targets
 for idx, metric in enumerate(preserve_col):
     plt.subplot(value+idx+1)
-
-
     plt.scatter(np.arange(0, abnormal_data[:, idx].shape[0]), abnormal_data[:, idx],  label=metric, c=np.where(targets.iloc[:, 1]==1, "red", "blue"))
     # plt.scatter(np.arange(0, abnormal_data[:, idx].shape[0]), abnormal_data[:, -2],  label=metric, c=np.where(targets.iloc[:, 1]==1, "red", "blue"), alpha=0.2)
     # plt.scatter(np.arange(0, abnormal_data[:, idx].shape[0]), abnormal_data[:, -1],  label=metric, c=np.where(targets.iloc[:, 1]==1, "red", "blue"), alpha=0.2)

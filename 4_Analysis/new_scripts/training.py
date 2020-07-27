@@ -48,7 +48,7 @@ def evaluate():
     return 0
 
 input_dimension = train.shape[1]
-hidden_dimension = 2
+hidden_dimension = 3
 number_epochs = 50
 learning_rate = 0.0001
 
@@ -62,7 +62,7 @@ errors, model = train_whole(number_epochs, train_dataloader, model)
 predictions_validation, real_values_validation = test_preds(model, validation_dataloader)
 predictions_test, real_values_test = test_preds(model, test_dataloader)
 
-plt_figure_res = "/home/matilda/PycharmProjects/RCA_metrics /5_Insights/results/" + experiment + "_" + service_ + "_results_validation_test.png"
+# plt_figure_res = "/home/matilda/PycharmProjects/RCA_metrics /5_Insights/results/" + experiment + "_" + service_ + "_results_validation_test.png"
 plt.subplot(121)
 validation = np.power(np.array(predictions_validation) - np.array(real_values_validation), 2).mean(axis=1)
 plt.hist(validation,  bins=100)
@@ -71,12 +71,12 @@ plt.subplot(122)
 test = np.power(np.array(predictions_test) - np.array(real_values_test), 2).mean(axis=1)
 plt.hist(test, bins=100)
 plt.title("TEST")
-plt.savefig(plt_figure_res)
+# plt.savefig(plt_figure_res)
 # plt.plot(test_[:, 0])
 # plt.plot(test)
 
 plt.figure(figsize=(15, 5))
 sns.heatmap(np.power(np.array(predictions_test) - np.array(real_values_test), 2).T)
 plt.yticks(np.arange(len(features)), features, rotation=0)
-figure_name = "/home/matilda/PycharmProjects/RCA_metrics /5_Insights/results/" + experiment + "_" + service_ + ".png"
-plt.savefig(figure_name)
+# figure_name = "/home/matilda/PycharmProjects/RCA_metrics /5_Insights/results/" + experiment + "_" + service_ + ".png"
+# plt.savefig(figure_name)

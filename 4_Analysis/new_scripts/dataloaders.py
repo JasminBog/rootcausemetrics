@@ -1,14 +1,15 @@
 import torch
 import pandas as pd
-import matplotlib
-matplotlib.use("TkAgg")
+
 import matplotlib.pyplot as plt
 from torch.utils.data import DataLoader, SequentialSampler, RandomSampler, TensorDataset
 
 
 service_ = "orders"
 experiment = "cpu"
-experiments_feature_sets = {"cpu": [0, 2, 3, 5, 6, 7], "memory":[0, 2, 3, 5, 6, 7]}
+# experiments_feature_sets = {"cpu": [0, 2, 3, 5, 6, 7], "memory":[0, 2, 3, 5, 6, 7]}
+
+experiments_feature_sets = {"cpu": [0, 1, 2, 3, 4, 5, 6, 7], "memory":[0, 1, 2, 3, 4, 5, 6, 7]}
 
 
 
@@ -47,5 +48,5 @@ test_dataloader = DataLoader(test_tensor, sampler=test_sampler, batch_size=batch
 
 
 
-pomaaaa = pd.read_csv(path_test)
-plt.plot(pomaaaa.loc[:, "ctn_memory"])
+# pomaaaa = pd.read_csv(path_test)
+# plt.plot(pomaaaa.loc[:, "ctn_memory"])
